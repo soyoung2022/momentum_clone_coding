@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">    <!--css 파일 가져오기-->
+
+    <title>Momentum</title>
+</head>
+<body>
+    <!--input의 유효성 검사를 위해서는 input이 form 안에 있어야 한다. 
+    또한, input을 form 안에 넣었을 경우에는 엔터를 누를 때마다 form이 자동으로 submit 된다.
+    form이 submit 되면 웹사이트는 자동으로 새로고침된다. 따라서 form의 submit을 막아줘야 하는데, -->
+    <form class="hidden" id="login-form">
+        <input required maxlength="15" type="text" placeholder="What is your name?">
+        <Button>Log in</Button>
+    </form>
+    <h2 id="clock">00:00</h2>
+    <h1 id="greeting" class="hidden"></h1>
+    <div class="todo">
+        <div>
+            <form id="todo-form">
+                <input type="text" placeholder="Write a To Do and Press Enter" required>
+            </form>
+        </div>
+        <div>
+            <ul id="todo-list"></ul>
+        </div>
+    </div>
+    <div id="quote">
+        <span></span><br>
+        <span></span>
+    </div>
+    <div id="weather">
+        <span></span>
+        <span></span>
+    </div>
+    <div id="background-cover"></div>
+    <script src="js/greetings.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/quotes.js"></script>
+    <script src="js/background.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/weather.js"></script>
+</body>
+</html>

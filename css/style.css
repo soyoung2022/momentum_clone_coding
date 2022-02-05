@@ -1,0 +1,160 @@
+/* 
+[선택자 종류]
+1. 태그 선택자 --> li{} h1{} ... 등 --> 모든 li 태그, h1 태그에 적용됨
+2. 아이디 선택자 --> #아이디명 --> 해당 아이디를 가진 element에 적용됨
+3. 클래스 선택자 --> .클래스명 --> 해당 아이디를 가진 element에 적용됨
+[부모 자식 선택자]
+: 띄어쓰기 이용 --> Ex) ul li{color:red;}   --> ul 태그 밑에 있는 li 태그들에 빨간색 적용
+: > 이용 --> 띄어쓰기 대신 >를 작성하면 a>b라고 했을 때 a의 직계 b에 대해서 css를 적용한다.
+: , 이용 --> 띄어쓰기 대신 ,를 작성하면 여러 선택자에 대해 같은 css를 적용할 수 있다.
+[pseudo class selector]
+1. :link - 방문한 적이 없는 링크
+2. :visited - 방문한 적이 있는 링크 --> 보안 문제로 일부 속성만 사용 가능
+3. :hover - 마우스를 롤오버 했을 때
+4. :active - 마우스를 클릭했을 때
+5. :focus --> 어떤 이유로 맨 마지막에 사용하는 것이 좋음
+*/
+
+
+/* hidden 클래스 --> display : none --> 화면에서 안 보이게 하기
+*/
+.hidden{
+    display: none;
+}
+
+body{
+    margin: 0 auto;
+    overflow: hidden;
+}
+ul{
+    list-style: none;
+    margin-top: 5px;
+}
+
+#background{
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#background-cover{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+#login-form{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-40%, -50%);
+    z-index: 2;
+    text-align: center;
+    color: snow;
+    opacity: 80%;
+}
+
+#greeting{
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 2;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    font-size: 10vh;
+    color: snow;
+    opacity: 80%;
+}
+
+input[type=text]{
+    width: 25vh;
+    height: 5vh;
+    border: 2px solid snow;
+    border-radius: 2px;
+}
+
+.todo{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 2;
+    margin-top: 2%;
+
+}
+
+#todo-form{
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    font-size: 12rem;
+    color: snow;
+    opacity: 80%;
+}
+
+#todo-list{
+    position: absolute;
+    z-index: 2;
+    text-align: center;
+    font-size: 1.5rem;
+    color: white;
+}
+
+#todo-list button{
+    position: relative;
+    border: 1px solid snow;
+    border-radius: 2px;
+    background-color: (0, 0, 0, 0.4);
+    margin-right: 5px;
+    margin-bottom: 5px;
+    border-radius: 5%;
+}
+
+#todo-list button:hover{
+    border: none;
+    background-color: (0, 0, 0, 0.2);
+}
+
+#todo-list>li{
+    position: relative;
+}
+
+#clock{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 2;
+    text-align: center;
+    font-size: 11vh;
+    color: snow;
+    opacity: 80%;
+}
+#quote{   
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 2;
+    text-align: center;
+    font-size: 1.5vh;
+    color: snow;
+    opacity: 80%;
+}
+#weather{
+    position: absolute;
+    top: 22%;
+    left: 32%;
+    transform: translate(-50%,-50%);
+    z-index: 2;
+    text-align: center;
+    font-size: 1.6vh;
+    color: whitesmoke;
+    opacity: 80%;
+}
